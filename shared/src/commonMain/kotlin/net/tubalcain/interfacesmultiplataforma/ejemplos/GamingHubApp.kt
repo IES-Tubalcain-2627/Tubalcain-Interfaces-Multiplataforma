@@ -1,4 +1,4 @@
-package net.tubalcain.interfacesmultiplataforma
+package net.tubalcain.interfacesmultiplataforma.ejemplos
 
 
 import androidx.compose.foundation.background

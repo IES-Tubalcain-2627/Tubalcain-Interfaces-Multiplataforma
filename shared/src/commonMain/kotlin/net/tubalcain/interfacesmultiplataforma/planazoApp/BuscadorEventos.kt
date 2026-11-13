@@ -1,5 +1,4 @@
-
-package net.tubalcain.interfacesmultiplataforma
+package net.tubalcain.interfacesmultiplataforma.planazoApp
 
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults

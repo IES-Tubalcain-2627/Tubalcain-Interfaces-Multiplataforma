@@ -1,4 +1,4 @@
-package net.tubalcain.interfacesmultiplataforma
+package net.tubalcain.interfacesmultiplataforma.planazoApp
 
 import BotonLimpiarFiltros
 import androidx.compose.foundation.background

@@ -1,9 +1,8 @@
 package net.tubalcain.interfacesmultiplataforma
 
-import BuscadorSpotifyApp
-import SpotifyCloneApp
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport
+import net.tubalcain.interfacesmultiplataforma.planazoApp.PlanazoApp
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {

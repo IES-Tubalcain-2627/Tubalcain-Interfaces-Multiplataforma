@@ -1,4 +1,6 @@
-package net.tubalcain.interfacesmultiplataforma
+package net.tubalcain.interfacesmultiplataforma.inicial
+
+import net.tubalcain.interfacesmultiplataforma.getPlatform
 
 class Greeting {
     private val platform = getPlatform()

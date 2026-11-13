@@ -1,4 +1,4 @@
-package net.tubalcain.interfacesmultiplataforma
+package net.tubalcain.interfacesmultiplataforma.inicial
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
