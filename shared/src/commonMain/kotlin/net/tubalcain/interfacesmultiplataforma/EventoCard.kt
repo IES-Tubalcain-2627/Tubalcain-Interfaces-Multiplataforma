@@ -2,6 +2,8 @@ package net.tubalcain.interfacesmultiplataforma
 
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,6 +15,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -25,7 +28,9 @@ fun EventoCard(
     evento: Evento,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    mostrarDescripcion: Boolean = false
+    mostrarDescripcion: Boolean = false,
+    colorFondo: Color = Color(0xFF252535),
+    colorCategoria: Color = Color(0xFFB5A2FF)
 ) {
     val tarjeta = Color(0xFF252535)
     val morado = Color(0xFFB5A2FF)
@@ -37,7 +42,7 @@ fun EventoCard(
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = tarjeta
+            containerColor = colorFondo
         )
     ) {
         Row(
@@ -64,7 +69,7 @@ fun EventoCard(
 
                 Text(
                     text = evento.categoria,
-                    color = morado
+                    color = colorCategoria
                 )
 
                 Text(

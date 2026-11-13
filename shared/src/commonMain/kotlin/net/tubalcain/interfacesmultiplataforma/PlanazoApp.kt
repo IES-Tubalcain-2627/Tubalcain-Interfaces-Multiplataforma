@@ -273,6 +273,10 @@ fun PlanazoApp() {
                         EventoCard(
                             evento = evento,
                             mostrarDescripcion = mostrarDescripciones,
+                            colorFondo = if (evento.categoria == "Música")
+                                Color(0xFF7B2FF7)
+                            else
+                                Color(0xFF252535),
                             onClick = {
                                 eventoSeleccionado = evento
                                 pantalla = "detalle"
