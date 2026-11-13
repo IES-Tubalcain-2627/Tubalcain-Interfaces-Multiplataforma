@@ -267,6 +267,9 @@ fun PlanazoApp() {
                         )
                     }
 
+                    item {
+                        EjemploAnimacion()
+                    }
 
                     // LISTA DE EVENTOS
                     items(eventosFiltrados) { evento ->
