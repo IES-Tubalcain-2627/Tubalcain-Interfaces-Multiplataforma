@@ -17,6 +17,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -36,7 +39,12 @@ fun EventoCard(
     Card(
         modifier = modifier
             .widthIn(max = 850.dp)
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .semantics {
+                stateDescription =
+                    "Evento: ${evento.nombre}, " +
+                            "categoría: ${evento.categoria}"
+            },
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
@@ -52,7 +60,11 @@ fun EventoCard(
         ) {
             Text(
                 text = evento.emoji,
-                fontSize = 36.sp
+                fontSize = 36.sp,
+                modifier = Modifier.semantics {
+                    contentDescription =
+                        "Evento de categoría ${evento.categoria}"
+                }
             )
 
             Column(

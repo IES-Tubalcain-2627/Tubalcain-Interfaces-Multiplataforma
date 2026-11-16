@@ -15,7 +15,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.Button
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -36,7 +35,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
-import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploAnimacion
 import net.tubalcain.interfacesmultiplataforma.planazoApp.components.BotonLimpiarFiltros
 import net.tubalcain.interfacesmultiplataforma.planazoApp.components.BuscadorEventos
 import net.tubalcain.interfacesmultiplataforma.planazoApp.components.CategoriaChip
@@ -44,6 +42,10 @@ import net.tubalcain.interfacesmultiplataforma.planazoApp.components.DatoRapidoH
 import net.tubalcain.interfacesmultiplataforma.planazoApp.components.DatoRapidoVertical
 import net.tubalcain.interfacesmultiplataforma.planazoApp.components.EventoCard
 import net.tubalcain.interfacesmultiplataforma.planazoApp.components.PanelContenido
+import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploAnimacion
+import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploClickable
+import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploCombinedClickable
+import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploModifiers
 import net.tubalcain.interfacesmultiplataforma.planazoApp.model.Evento
 import net.tubalcain.interfacesmultiplataforma.planazoApp.theme.PlanazoTheme
 
@@ -267,7 +269,18 @@ fun PlanazoApp() {
                         )
                     }
 
+                    item {
+                        EjemploModifiers()
+                    }
 
+                    item {
+                        Column(
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            EjemploClickable()
+                            EjemploCombinedClickable()
+                        }
+                    }
 
                     item {
                         PanelContenido(
