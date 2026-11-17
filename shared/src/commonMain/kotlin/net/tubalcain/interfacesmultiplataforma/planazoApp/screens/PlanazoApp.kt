@@ -46,6 +46,7 @@ import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploAnimac
 import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploClickable
 import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploCombinedClickable
 import net.tubalcain.interfacesmultiplataforma.planazoApp.ejemplos.EjemploModifiers
+import net.tubalcain.interfacesmultiplataforma.planazoApp.logic.filtrarEventos
 import net.tubalcain.interfacesmultiplataforma.planazoApp.model.Evento
 import net.tubalcain.interfacesmultiplataforma.planazoApp.theme.PlanazoTheme
 
@@ -113,11 +114,13 @@ fun PlanazoApp() {
     var inscrito by remember { mutableStateOf(false) }
 
     // FILTRADO
-    val eventosFiltrados = eventos.filter { evento ->
-        evento.nombre.contains(busqueda, ignoreCase = true) &&
-                (categoriaElegida == "Todos" ||
-                        evento.categoria == categoriaElegida)
-    }
+
+    val eventosFiltrados = filtrarEventos(
+        eventos = eventos,
+        busqueda = busqueda,
+        categoriaElegida = categoriaElegida
+    )
+
 
     // SNACKBAR
     val snackbarHostState = remember { SnackbarHostState() }

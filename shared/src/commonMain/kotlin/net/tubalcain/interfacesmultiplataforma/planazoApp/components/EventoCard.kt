@@ -25,6 +25,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import net.tubalcain.interfacesmultiplataforma.planazoApp.model.Evento
 
+/**
+ * Muestra una tarjeta con la información de un evento.
+ *
+ * Permite personalizar los colores y mostrar
+ * u ocultar la descripción del evento.
+ *
+ * @param evento Evento que se mostrará.
+ * @param onClick Acción al pulsar la tarjeta.
+ * @param modifier Modificadores de Compose.
+ * @param mostrarDescripcion Indica si se muestra la descripción.
+ * @param colorFondo Color de fondo de la tarjeta.
+ * @param colorCategoria Color del texto de la categoría.
+ */
+
 @Composable
 fun EventoCard(
     evento: Evento,
